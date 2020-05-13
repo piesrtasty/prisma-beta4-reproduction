@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node@canary",
+      "config": { "maxLambdaSize": "20mb" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/graphql",
+      "dest": "index.js"
+    }
+  ]
+}
